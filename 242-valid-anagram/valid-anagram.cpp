@@ -3,21 +3,15 @@ public:
     bool isAnagram(string s, string t) {
         int ns =s.size();
         int nt =t.size();
+        if(ns!=nt) return false;
         sort(s.begin(),s.end());
         sort(t.begin(),t.end());
+        if(s==t) return true;
+        else return false;
 
-        if(ns!=nt) return false;
-        else{
-            int i = 0 ;
-            while(i<=ns){
-                if(s[i]==t[i]) i++;
-                else return false;
-            }
-            return true;
+        
 
-        }
-
-        return false;
+       
 
         
         
